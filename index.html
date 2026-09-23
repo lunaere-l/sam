@@ -57,5 +57,28 @@
         Petit à petit, nous sommes devenues inséparables. Aujourd'hui, je n'imagine pas ma vie sans elle.
     </p>
 
+
+    <!-- LE BOUTON INTERACTIF -->
+    <button class="mon-bouton" id="boutonSecret">Clique ici pour voir le secret !</button>
+
+    <!-- LE BLOC CACHÉ -->
+    <p class="texte-cache" id="messageSecret">✨ Secret de Sam : Elle adore manger les petites friandises en cachette quand Sal a le dos tour ! ✨</p>
+
+    <!-- LE CODE JAVASCRIPT -->
+    <script>
+        const monBouton = document.getElementById('boutonSecret');
+        const monMessage = document.getElementById('messageSecret');
+
+        monBouton.addEventListener('click', function() {
+            if (monMessage.style.display === 'none' || monMessage.style.display === '') {
+                monMessage.style.display = 'block';
+                monBouton.textContent = 'Cacher le secret !';
+            } else {
+                monMessage.style.display = 'none';
+                monBouton.textContent = 'Clique ici pour voir le secret !';
+            }
+        });
+    </script>
+
 </body>
 </html>
